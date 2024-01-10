@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Tilt+Neon&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Tilt Neon', sans-serif;
+}
+
+.navbar{
+    background-color: #fff;
+}
+
+.sidebarNavbar{
+    background-color: #0a0d52;
+}
+
+.sidebar{
+    background-color: #0d1154;
+    height: 100%;
+}
+
+.content{
+    background-color: #f0f0f0;
+}
+
+.rowcontent{
+    height: 100vh;
+}
