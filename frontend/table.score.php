@@ -13,13 +13,19 @@
         $qLogScore->bindParam(":subjectId",$subjectId,PDO::PARAM_INT);
         $qLogScore->execute();
         $dataLog = $qLogScore->fetchObject();
-        
+        $rowLog = $qLogScore->rowCount();
         ?>
         <tr>
             <td><?php echo $data->studentCode ?></td>
             <td><?php echo $data->name ?></td>
-            <td><input type="number" id="score_<?php echo $i; ?>" class="form-control" min="0" value="<?php 
-            echo $dataLog->score; ?>" max="100" style="width: 100px;"></td>
+            <td><input type="number" id="score_<?php echo $i; ?>" class="form-control" min="0" value="<?php if($rowLog == 0){
+                echo 0;
+            }else{
+                echo $dataLog->score;
+            }
+     
+                
+             ?>" max="100" style="width: 100px;"></td>
         </tr>
    <?php $i++ ; }
 ?>

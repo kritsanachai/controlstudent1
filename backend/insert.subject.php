@@ -8,7 +8,7 @@
     $qInSubject->bindParam(":numSubject",$numSubject,PDO::PARAM_STR);
     $qInSubject->bindParam(":subjectName",$subjectName,PDO::PARAM_STR);
     $qInSubject->bindParam(":credit",$credit,PDO::PARAM_STR);
-
+    
     if($qInSubject->execute()){
         echo json_encode(1);
     }else{
